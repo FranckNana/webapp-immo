@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs';
-import { Users } from '../models/users.model';
 import * as firebase from 'firebase';
 import { Pub, RespPub } from '../models/pub.model';
 import { Email, RespEmail } from '../models/Email.model';
+import { Users } from '../models/users.model';
 
 
 @Injectable({

@@ -20,11 +20,11 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupSinglePageComponent } from './auth/signup-single-page/signup-single-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { UserService } from './ServiceRest/user.service';
 import { MailpromoteurComponent } from './pages/Messages/promoteur/mailpromoteur/mailpromoteur.component';
-import { ModificationOffreComponent } from './pages/page-promoteur/modification-offre/modification-offre.component';
 import { ModificationCompteComponent } from './pages/modification-compte/modification-compte.component';
 import { MailclientComponent } from './pages/Messages/client/mailclient/mailclient.component';
+import { ModificationOffreComponent } from './pages/page-promoteur/Modification-offre/modification-offre.component';
+import { UserService } from './ServiceRest/user.service';
 
 
 const appRoutes: Routes = [

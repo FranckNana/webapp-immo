@@ -1,5 +1,6 @@
 import { Users } from './users.model';
 
+
 export class Pub {
     photo: string;
     email: string;

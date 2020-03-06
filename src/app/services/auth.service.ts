@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
-import { Subject } from 'rxjs';
-import { Users } from '../models/users.model';
 
 @Injectable({
   providedIn: 'root'
