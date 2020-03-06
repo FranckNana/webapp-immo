@@ -4,8 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/ServiceRest/user.service';
 import { Subscription } from 'rxjs';
-import { Users } from 'src/app/models/users.model';
-import * as firebase from 'firebase';
+import { Users } from 'src/app/models/Users.model';
 
 @Component({
   selector: 'app-signup-single-page',

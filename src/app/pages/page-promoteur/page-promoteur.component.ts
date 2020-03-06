@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import * as firebase from 'firebase';
-import { Users } from 'src/app/models/users.model';
+import { Users } from 'src/app/models/Users.model';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/ServiceRest/user.service';
 import { RespPub } from 'src/app/models/pub.model';

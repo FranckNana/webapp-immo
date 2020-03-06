@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import * as firebase from 'firebase';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { UserService } from '../ServiceRest/user.service';
+import { UserService } from '../ServiceRest/User.service';
 import { Subscription } from 'rxjs';
 import { Users } from '../models/users.model';
 

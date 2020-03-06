@@ -3,8 +3,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/ServiceRest/user.service';
-import { Users } from 'src/app/models/users.model';
-import { Subject, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-promoteur-signup',

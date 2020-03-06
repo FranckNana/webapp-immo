@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Users } from 'src/app/models/users.model';
+import { Users } from 'src/app/models/Users.model';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/ServiceRest/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RespPub } from 'src/app/models/pub.model';
 import { NgForm } from '@angular/forms';
 
 @Component({

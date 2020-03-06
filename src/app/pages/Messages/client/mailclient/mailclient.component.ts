@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/ServiceRest/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { RespPub } from 'src/app/models/pub.model';
-import { Users } from 'src/app/models/users.model';
+import { Users } from 'src/app/models/Users.model';
 
 @Component({
   selector: 'app-mailclient',

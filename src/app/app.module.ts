@@ -25,9 +25,6 @@ import { ModificationCompteComponent } from './pages/modification-compte/modific
 import { MailclientComponent } from './pages/Messages/client/mailclient/mailclient.component';
 import { ModificationOffreComponent } from './pages/page-promoteur/Modification-offre/modification-offre.component';
 import { UserService } from './ServiceRest/user.service';
-import { Email, RespEmail } from './models/Email.model';
-import { Pub, RespPub } from './models/pub.model';
-import { Users } from './models/users.model';
 
 
 const appRoutes: Routes = [
@@ -82,12 +79,7 @@ const appRoutes: Routes = [
   providers: [
     AuthService,
     AuthGardService,
-    UserService,
-    Email,
-    RespEmail,
-    Pub,
-    RespPub,
-    Users
+    UserService
   ],
   bootstrap: [AppComponent]
 })

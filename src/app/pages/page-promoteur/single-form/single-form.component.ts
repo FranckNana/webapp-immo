@@ -3,7 +3,7 @@ import { Pub } from 'src/app/models/pub.model';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/ServiceRest/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Users } from 'src/app/models/users.model';
+import { Users } from 'src/app/models/Users.model';
 import { Subscription } from 'rxjs';
 
 @Component({
