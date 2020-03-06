@@ -4,7 +4,7 @@ import { Subject } from 'rxjs';
 import * as firebase from 'firebase';
 import { Pub, RespPub } from '../models/pub.model';
 import { Email, RespEmail } from '../models/Email.model';
-import { Users } from '../models/users.model';
+import { Users } from '../models/Users.model';
 
 
 @Injectable({
