@@ -59,7 +59,7 @@ export class UserService {
     this.user = newUser;
     
     this.http
-      .post<Users>("://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/newusers", this.user)
+      .post<Users>("http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/newusers", this.user)
       .subscribe(
         () => {
           console.log('Utilisateur créé');
@@ -73,7 +73,7 @@ export class UserService {
   }
 
   getUserFromServer(email: string) {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/connexion/" + email;
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/connexion/" + email;
 
     return new Promise(
       (resolve, reject) => {
@@ -92,7 +92,7 @@ export class UserService {
 
   onInitGetUserFromServer() {
     const userStoredEmail = sessionStorage.getItem("email");
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/connexion/"+ userStoredEmail;
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/connexion/"+ userStoredEmail;
 
     this.http
       .get<Users>(url)
@@ -136,7 +136,7 @@ export class UserService {
   }
 
   SavePubIntoBase(pub: Pub) {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/newpublication";
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/newpublication";
 
     this.http.post<Pub>(url, pub)
       .subscribe(
@@ -172,7 +172,7 @@ export class UserService {
   }
 
   getPromoteurPubFromServer(email: string) {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publications/"+ email;
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publications/"+ email;
 
     return new Promise(
       (resolve, reject) => {
@@ -191,7 +191,7 @@ export class UserService {
 
   onInitGetPubFromServer() {
     const userStoredEmail = sessionStorage.getItem("email");
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publications/"+ userStoredEmail;
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publications/"+ userStoredEmail;
 
     this.http
       .get<RespPub[]>(url)
@@ -216,7 +216,7 @@ export class UserService {
 
 
   getSinglePubOfPromoteur(id: number) {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publication/"+id;
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publication/"+id;
 
     return new Promise(
       (resolve, reject) => {
@@ -250,7 +250,7 @@ export class UserService {
   deleteImgFromServer(respub: RespPub) {
 
     this.http
-      .delete<RespPub>("://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/delete" + "/" + respub.id)
+      .delete<RespPub>("http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/delete" + "/" + respub.id)
       .subscribe(
         () => {
           console.log('Publication Supprimée');
@@ -265,7 +265,7 @@ export class UserService {
   deleteUserInServer(user: Users) {
     //var user = firebase.auth().currentUser;
     this.http
-      .delete<RespPub>("://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/deleteuser" + "/" + user.email)
+      .delete<RespPub>("http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/deleteuser" + "/" + user.email)
       .subscribe(
         () => {
           console.log('Publication Supprimée');
@@ -278,7 +278,7 @@ export class UserService {
   }
 
   onInitGetAllPubFromServer() {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publications";
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/publications";
 
     return new Promise(
       (resolve, reject) => {
@@ -296,7 +296,7 @@ export class UserService {
   }
 
   sendMail(email: Email) {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/send-mail";
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/send-mail";
     this.http
       .post<Email>(url, email)
       .subscribe(
@@ -311,7 +311,7 @@ export class UserService {
   }
 
   getAllEmailFromServer(email: String) {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/mesmail/" + email;
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/mesmail/" + email;
 
     return new Promise(
       (resolve, reject) => {
@@ -331,7 +331,7 @@ export class UserService {
 
   onInitGetAllEmailFromServer() {
     const userStoredEmail = sessionStorage.getItem("email");
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/mesmail/" + userStoredEmail;
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/mesmail/" + userStoredEmail;
 
     return new Promise(
       (resolve, reject) => {
@@ -349,7 +349,7 @@ export class UserService {
   }
 
   ModifPubIntoBase(pub: Pub) {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/modification-pub";
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/modification-pub";
 
     this.http.put<Pub>(url, pub)
       .subscribe(
@@ -363,7 +363,7 @@ export class UserService {
   }
 
   ModifUserIntoBase() {
-    const url = "://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/modification-user";
+    const url = "http://rest-api-immo-env.p2cntupqca.us-east-1.elasticbeanstalk.com:5000/modification-user";
 
     this.http.put<Users>(url, this.user)
       .subscribe(
