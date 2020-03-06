@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RespPub } from 'src/app/models/pub.model';
 import { UserService } from 'src/app/ServiceRest/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Users } from 'src/app/models/users.model';
+import { Users } from 'src/app/models/Users.model';
 import { Subscription } from 'rxjs';
 import { NgForm } from '@angular/forms';
 
